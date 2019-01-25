@@ -1,0 +1,23 @@
+For question 4-7 I used the bioinf_testdb that we used in the lessons, because of technical problems with file
+
+#Question 4
+
+SELECT gene_name, (seq_region_end - seq_region_start +1) as size FROM gene ORDER BY size LIMIT 1;
+
+#Question 5
+
+SELECT gene_name, COUNT(transcript_id) AS total_transcripts FROM gene g JOIN transcript t ON g.gene_id = t.gene_id GROUP BY gene_name HAVING MAX(transcript_id) ORDER BY DESC LIMIT 1
+
+
+#Question 6
+
+1) SELECT chromosome, COUNT(*) AS total_genes FROM gene WHERE description LIKE '%cancer%' GROUP BY chromosome ORDER BY total_genes desc LIMIT 1 OFFSET 1;
+2)
+
+#Question 7
+SELECT count(*) FROM exon;
+
+SELECT count(*) FROM exon_transcript;
+
+Because the table exon_transcript is a cross-reference table between the table exon and the table transcript. To make this table an JOIN statement is used. Because of that the exon table is expand with the transcript table by inserting extra rows (cause of JOIN)
+
