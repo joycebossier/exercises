@@ -1,0 +1,11 @@
+#Question 8
+db.bioinf_mongo_examen.count({method_of_admission: {$elemMatch: "TABLET";"BUCCAL", "SUBLINGUAL"}})
+
+#Question 9
+db.bioinf_mongo_examen.count({percentage_of_side_effects: {$gt: 8}})
+
+#Question 10
+
+#Question 11
+
+
