@@ -1,0 +1,20 @@
+#Normalisation
+
+UNF (group all data in one entity)
+DB(Personnel number, Name, Date of birth, Lab code, Lab name, Research code, Research description, Research supervisor) 
+
+1NF (all repeating and calculated groups are eliminated in individual tables, as all attributes should be atomic
+Research code, description and supervisor are repeating fields
+
+DB(Personnel number, Name, Date of birth, Research supervisor)
+DB(Lab code, Lab name, Research code)	
+DB(Research code, Research description)
+
+2NF
+
+DB(Personnel number, Name, Date of birth)
+DB(Lab code, Lab name, Research code)
+DB(Research code, Research description)
+
+3NF
+=2NF
